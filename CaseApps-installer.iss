@@ -9,6 +9,8 @@
 #define RevitAddin15  RevitAddinFolder+"\2015\"
 #define RevitFolder16 RevitAddinFolder+"\2016\"+RevitAppName
 #define RevitAddin16  RevitAddinFolder+"\2016\"
+#define RevitFolder17 RevitAddinFolder+"\2017\"+RevitAppName
+#define RevitAddin17  RevitAddinFolder+"\2017\"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -35,7 +37,7 @@ Compression=lzma
 SolidCompression=yes
 ;info: http://revolution.screenstepslive.com/s/revolution/m/10695/l/95041-signing-installers-you-create-with-inno-setup
 ;comment/edit the line below if you are not signing the exe with the CASE pfx
-SignTool=signtoolcase
+;SignTool=signtoolcase
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -43,6 +45,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Components]
 Name: revit15; Description: CASE Apps for Autodesk Revit 2015; Types: full 
 Name: revit16; Description: CASE Apps for Autodesk Revit 2016;  Types: full
+Name: revit17; Description: CASE Apps for Autodesk Revit 2017;  Types: full
 
 [Files]
 ; REVIT 2015 ~~~~~~~~~~~~~~~~~~~
@@ -52,6 +55,10 @@ Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin15}"; Flags: ignor
 ;REVIT 2016 ~~~~~~~~~~~~~~~~~~~
 Source: "deploy\2016\*"; DestDir: "{#RevitFolder16}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit16 
 Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin16}"; Flags: ignoreversion; Components: revit16
+
+;REVIT 2017 ~~~~~~~~~~~~~~~~~~~
+Source: "deploy\2017\*"; DestDir: "{#RevitFolder17}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit17 
+Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin17}"; Flags: ignoreversion; Components: revit17
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
