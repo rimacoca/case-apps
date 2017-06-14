@@ -11,6 +11,8 @@
 #define RevitAddin16  RevitAddinFolder+"\2016\"
 #define RevitFolder17 RevitAddinFolder+"\2017\"+RevitAppName
 #define RevitAddin17  RevitAddinFolder+"\2017\"
+#define RevitFolder18 RevitAddinFolder+"\2018\"+RevitAppName
+#define RevitAddin18  RevitAddinFolder+"\2018\"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -46,6 +48,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: revit15; Description: CASE Apps for Autodesk Revit 2015; Types: full 
 Name: revit16; Description: CASE Apps for Autodesk Revit 2016;  Types: full
 Name: revit17; Description: CASE Apps for Autodesk Revit 2017;  Types: full
+Name: revit18; Description: CASE Apps for Autodesk Revit 2018;  Types: full
 
 [Files]
 ; REVIT 2015 ~~~~~~~~~~~~~~~~~~~
@@ -59,6 +62,10 @@ Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin16}"; Flags: ignor
 ;REVIT 2017 ~~~~~~~~~~~~~~~~~~~
 Source: "deploy\2017\*"; DestDir: "{#RevitFolder17}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit17 
 Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin17}"; Flags: ignoreversion; Components: revit17
+
+;REVIT 2018 ~~~~~~~~~~~~~~~~~~~
+Source: "deploy\2018\*"; DestDir: "{#RevitFolder18}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit18 
+Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin18}"; Flags: ignoreversion; Components: revit18
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
