@@ -9,41 +9,41 @@ Imports [Case].AppsRibbon.Utility
 
 Namespace Entry
 
-  ''' <summary>
-  ''' Revit Ribbon Implementation
-  ''' </summary>
-  ''' <remarks></remarks>
-  <Transaction(TransactionMode.Manual)>
-  Public Class AppMain
+    ''' <summary>
+    ''' Revit Ribbon Implementation
+    ''' </summary>
+    ''' <remarks></remarks>
+    <Transaction(TransactionMode.Manual)>
+    Public Class AppMain
 
-    Implements IExternalApplication
+        Implements IExternalApplication
 
-    Private Const CTabNamePro = "CASE Apps #2"
-    Private Const CTabNameFree = "CASE Apps #1"
+        Private Const CTabNamePro = "CASE Apps #2"
+        Private Const CTabNameFree = "CASE Apps #1"
 
-    Private _path As String
-    Private _uiApp As UIControlledApplication
-    Private _toolsExistsSubsc As Boolean = False
-    Private _toolsExistsFree As Boolean = False
+        Private _path As String
+        Private _uiApp As UIControlledApplication
+        Private _toolsExistsSubsc As Boolean = False
+        Private _toolsExistsFree As Boolean = False
 
 #Region "Public Members - Revit IExternalApplication Implementation"
 
-    ''' <summary>
-    ''' Startup
-    ''' </summary>
-    ''' <param name="a"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Function OnStartup(a As UIControlledApplication) As Result Implements IExternalApplication.OnStartup
+        ''' <summary>
+        ''' Startup
+        ''' </summary>
+        ''' <param name="a"></param>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public Function OnStartup(a As UIControlledApplication) As Result Implements IExternalApplication.OnStartup
 
-      Try
-        ' Path
-        _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly.Location)
-        ' UI App
-        _uiApp = a
-        ' General Buttons
-        LoadItemsGeneral()
-        Try
+            Try
+                ' Path
+                _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly.Location)
+                ' UI App
+                _uiApp = a
+                ' General Buttons
+                LoadItemsGeneral()
+                Try
                     ' Load the Ribbon Controls, etc.
                     LoadItemsTwo()
                 Catch ex As Exception
