@@ -7,6 +7,7 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using System.Linq;
 using Case.ViewCreator.API;
+using Entry;
 
 namespace Case.ViewCreator
 {
@@ -71,6 +72,7 @@ namespace Case.ViewCreator
       this.progressBar1.Show();
       this.btnCreate.Hide();
       this.btnCancel.Hide();
+            this.ButtonHelp.Hide();
       System.Windows.Forms.Application.DoEvents();
 
       try
