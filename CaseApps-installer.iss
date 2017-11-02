@@ -1,5 +1,5 @@
 #define MyAppName "CASE Apps"
-#define MyAppVersion "15.4.8"
+#define MyAppVersion "17.11.1"
 #define MyAppPublisher "CASE"
 #define MyAppURL "https://github.com/WeConnect/case-apps"
 
@@ -45,7 +45,7 @@ SolidCompression=yes
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Components]
-Name: revit15; Description: CASE Apps for Autodesk Revit 2015; Types: full 
+Name: revit15; Description: CASE Apps for Autodesk Revit 2015;  Types: full 
 Name: revit16; Description: CASE Apps for Autodesk Revit 2016;  Types: full
 Name: revit17; Description: CASE Apps for Autodesk Revit 2017;  Types: full
 Name: revit18; Description: CASE Apps for Autodesk Revit 2018;  Types: full

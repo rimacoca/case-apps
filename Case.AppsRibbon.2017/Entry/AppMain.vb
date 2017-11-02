@@ -36,14 +36,14 @@ Namespace Entry
     ''' <remarks></remarks>
     Public Function OnStartup(a As UIControlledApplication) As Result Implements IExternalApplication.OnStartup
 
-      Try
+    Try
         ' Path
         _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly.Location)
         ' UI App
         _uiApp = a
         ' General Buttons
         LoadItemsGeneral()
-        Try
+    Try
                     ' Load the Ribbon Controls, etc.
                     LoadItemsTwo()
                 Catch ex As Exception

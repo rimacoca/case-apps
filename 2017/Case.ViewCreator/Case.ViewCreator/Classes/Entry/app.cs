@@ -10,7 +10,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
-namespace Case.ViewCreator
+namespace Entry
 {
     /// <summary>
     /// Revit 2012 API Application Class

@@ -4,15 +4,15 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
-namespace Case.ViewCreator
+namespace Case.ViewCreator.Entry
 {
 
   /// <summary>
-  /// Revit 2018 Command Class
+  /// Revit 2012 Command Class
   /// </summary>
   /// <remarks></remarks>
   [Transaction(TransactionMode.Manual)]
-  public class cmd : IExternalCommand
+  public class CmdMain : IExternalCommand
   {
 
     /// <summary>
@@ -30,9 +30,9 @@ namespace Case.ViewCreator
       {
 
         // Version
-        if (!commandData.Application.Application.VersionName.Contains("2018"))
+        if (!commandData.Application.Application.VersionName.Contains("2017"))
         {
-          message = "This Add-In was built for Revit 2018, please contact CASE for assistance...";
+          message = "This Add-In was built for Revit 2017, please contact CASE for assistance...";
           return Result.Failed;
         }
 
