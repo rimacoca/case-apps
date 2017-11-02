@@ -9,12 +9,12 @@ Imports [Case].AppsRibbon.Utility
 
 Namespace Entry
 
-    ''' <summary>
-    ''' Revit Ribbon Implementation
-    ''' </summary>
-    ''' <remarks></remarks>
-    <Transaction(TransactionMode.Manual)>
-    Public Class AppMain
+  ''' <summary>
+  ''' Revit Ribbon Implementation
+  ''' </summary>
+  ''' <remarks></remarks>
+  <Transaction(TransactionMode.Manual)>
+  Public Class AppMain
 
     Implements IExternalApplication
 
