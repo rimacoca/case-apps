@@ -70,7 +70,7 @@ namespace Case.ViewCreator
       this.progressBar1.Show();
       this.btnCreate.Hide();
       this.btnCancel.Hide();
-        this.ButtonHelp.Hide();
+      this.ButtonHelp.Hide();
       System.Windows.Forms.Application.DoEvents();
 
       try

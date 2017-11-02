@@ -63,11 +63,11 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="RevitAPI">
-      <HintPath>C:\Program Files\Autodesk\Revit 2015\RevitAPI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Twinmotion.bundle\Contents\2015\RevitAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RevitAPIUI">
-      <HintPath>C:\Program Files\Autodesk\Revit 2015\RevitAPIUI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\ProgramData\Autodesk\ApplicationPlugins\Twinmotion.bundle\Contents\2015\RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -89,7 +89,7 @@
     <Compile Include="API\clsAPI.cs" />
     <Compile Include="Classes\clsParameterData.cs" />
     <Compile Include="Classes\Entry\app.cs" />
-    <Compile Include="Classes\Entry\cmd.cs" />
+    <Compile Include="Classes\Entry\CmdMain.cs" />
     <Compile Include="Forms\form_Main.cs">
       <SubType>Form</SubType>
     </Compile>

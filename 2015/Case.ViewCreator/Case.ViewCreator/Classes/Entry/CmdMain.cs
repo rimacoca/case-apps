@@ -4,7 +4,7 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
-namespace Case.ViewCreator
+namespace Case.ViewCreator.Entry
 {
 
   /// <summary>
@@ -12,7 +12,7 @@ namespace Case.ViewCreator
   /// </summary>
   /// <remarks></remarks>
   [Transaction(TransactionMode.Manual)]
-  public class cmd : IExternalCommand
+  public class CmdMain : IExternalCommand
   {
 
     /// <summary>
@@ -30,9 +30,9 @@ namespace Case.ViewCreator
       {
 
         // Version
-        if (!commandData.Application.Application.VersionName.Contains("2013"))
+        if (!commandData.Application.Application.VersionName.Contains("2015"))
         {
-          message = "This Add-In was built for Revit 2013, please contact CASE for assistance...";
+          message = "This Add-In was built for Revit 2015, please contact CASE for assistance...";
           return Result.Failed;
         }
 

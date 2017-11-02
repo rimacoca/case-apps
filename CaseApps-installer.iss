@@ -5,6 +5,8 @@
 
 #define RevitAppName  "Case.Apps"
 #define RevitAddinFolder "{userappdata}\Autodesk\REVIT\Addins"
+#define RevitFolder15 RevitAddinFolder+"\2015\"+RevitAppName
+#define RevitAddin15  RevitAddinFolder+"\2015\"
 #define RevitFolder16 RevitAddinFolder+"\2016\"+RevitAppName
 #define RevitAddin16  RevitAddinFolder+"\2016\"
 #define RevitFolder17 RevitAddinFolder+"\2017\"+RevitAppName
@@ -43,11 +45,15 @@ SolidCompression=yes
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Components]
+Name: revit15; Description: CASE Apps for Autodesk Revit 2015;  Types: full 
 Name: revit16; Description: CASE Apps for Autodesk Revit 2016;  Types: full
 Name: revit17; Description: CASE Apps for Autodesk Revit 2017;  Types: full
 Name: revit18; Description: CASE Apps for Autodesk Revit 2018;  Types: full
 
 [Files]
+; REVIT 2015 ~~~~~~~~~~~~~~~~~~~
+Source: "deploy\2015\*"; DestDir: "{#RevitFolder15}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit15 
+Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin15}"; Flags: ignoreversion; Components: revit15 
 
 ;REVIT 2016 ~~~~~~~~~~~~~~~~~~~
 Source: "deploy\2016\*"; DestDir: "{#RevitFolder16}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit16 
