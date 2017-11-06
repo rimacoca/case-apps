@@ -231,8 +231,12 @@ Namespace Data
       ' Start a New Transaction
       Using t As New Transaction(_r.Document, "3D Room Tag Placement: " & Me.Name & ", " & Me.Number)
         If t.Start() Then
-
+          
           Try
+              ' Check if family symbol is active, if not activate it. Since Revit 2014.
+              If not s.IsActive Then 
+                  s.Activate()
+              End If
 
             ' Place the Element
             Dim m_inst As FamilyInstance = _r.Document.Create.NewFamilyInstance _
