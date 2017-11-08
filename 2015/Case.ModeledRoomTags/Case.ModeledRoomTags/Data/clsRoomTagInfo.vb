@@ -230,8 +230,7 @@ Namespace Data
 
       ' Start a New Transaction
       Using t As New Transaction(_r.Document, "3D Room Tag Placement: " & Me.Name & ", " & Me.Number)
-        If t.Start() Then
-          
+        If t.Start() Then         
           Try
               ' Check if family symbol is active, if not activate it. Since Revit 2014.
               If not s.IsActive Then 
