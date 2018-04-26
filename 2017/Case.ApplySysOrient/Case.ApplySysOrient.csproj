@@ -50,7 +50,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\clsAPI.cs" />
     <Compile Include="Data\clsDuct.cs" />
     <Compile Include="Data\clsPipe.cs" />
     <Compile Include="Data\clsSettings.cs" />

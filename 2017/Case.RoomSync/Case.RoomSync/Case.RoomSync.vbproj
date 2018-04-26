@@ -73,7 +73,6 @@
     <Import Include="System.Collections.Generic" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\clsUsage.vb" />
     <Compile Include="Data\clsRoom.vb" />
     <Compile Include="Data\clsSettings.vb" />
     <Compile Include="Data\modGeneral.vb" />
