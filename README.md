@@ -1,3 +1,12 @@
+# NOTE: This repo is primarily a host for the CASE apps that were discontinued on the previous repo. I cannot promise continued support for the apps. 
+
+For more info on this refer to the following links:
+>https://twitter.com/gtalarico/status/986790742139039749
+
+>https://twitter.com/AYBABTM/status/986669506255818752
+
+---
+
 # CASE Apps
 
 A revolutionary set of Autodesk Revit add-ins and tools, CASE Apps enhances your daily BIM workflows allowing your teams to do more — better and faster. Previously offered as pro and free subscriptions through [CASE] (http://case-inc.com/) and open sourced by [WeWork](http://wework.com), this software comes with a simple installer. 
