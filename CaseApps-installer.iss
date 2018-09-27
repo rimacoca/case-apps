@@ -1,5 +1,5 @@
 #define MyAppName "CASE Apps"
-#define MyAppVersion "18.4.26"
+#define MyAppVersion "18.9.26"
 #define MyAppPublisher "CASE"
 #define MyAppURL "https://github.com/sixtysecondrevit/case-apps"
 
@@ -13,6 +13,8 @@
 #define RevitAddin17  RevitAddinFolder+"\2017\"
 #define RevitFolder18 RevitAddinFolder+"\2018\"+RevitAppName
 #define RevitAddin18  RevitAddinFolder+"\2018\"
+#define RevitFolder19 RevitAddinFolder+"\2019\"+RevitAppName
+#define RevitAddin19  RevitAddinFolder+"\2019\"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -49,6 +51,7 @@ Name: revit15; Description: CASE Apps for Autodesk Revit 2015;  Types: full
 Name: revit16; Description: CASE Apps for Autodesk Revit 2016;  Types: full
 Name: revit17; Description: CASE Apps for Autodesk Revit 2017;  Types: full
 Name: revit18; Description: CASE Apps for Autodesk Revit 2018;  Types: full
+Name: revit19; Description: CASE Apps for Autodesk Revit 2019;  Types: full
 
 [Files]
 ; REVIT 2015 ~~~~~~~~~~~~~~~~~~~
@@ -66,6 +69,10 @@ Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin17}"; Flags: ignor
 ;REVIT 2018 ~~~~~~~~~~~~~~~~~~~
 Source: "deploy\2018\*"; DestDir: "{#RevitFolder18}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit18 
 Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin18}"; Flags: ignoreversion; Components: revit18
+
+;REVIT 2019 ~~~~~~~~~~~~~~~~~~~
+Source: "deploy\2019\*"; DestDir: "{#RevitFolder19}"; Excludes: "*.pdb,*.xml,*.config,*.addin,*.tmp"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: revit19 
+Source: "deploy\{#RevitAppName}.addin"; DestDir: "{#RevitAddin19}"; Flags: ignoreversion; Components: revit19
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
