@@ -16,7 +16,7 @@ While we hope some of our old and new friends continue to actively contribute to
 Huge thanks to [Don Rudder](https://github.com/rudderdon) for developing most of these tools! And let’s not forget [Matthew Nelson](https://github.com/mnelson7982), [Matteo Cominetti](https://github.com/teocomi), and [Kyle Morin](https://github.com/kmorin) for contributing.
 
 ## Installation
-To install the tools, head over the releases page and download the latest .exe installer: https://github.com/WeConnect/case-apps/releases
+To install the tools, head over the releases page and download the latest .exe installer: https://github.com/johnpierson/case-apps/releases
 
 ## Structure
 The code contains 2015 and 2016 verison of the add-in's projects organized in folders by year and set (as per below), these are respectively part of a 2015 and a 2016 solution.
