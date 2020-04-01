@@ -39,7 +39,7 @@ Public Class clsAutomationTest
 
               Try
 
-                Dim m_level As Level = _s.Doc.Create.NewLevel(i)
+                Dim m_level As Level = Level.Create(_s.Doc,i)
                 m_level.Name = Environment.UserName & " Level " & i.ToString
                 _s.GetLevels()
 
@@ -72,10 +72,10 @@ Public Class clsAutomationTest
             Dim pt2 As New XYZ(0, 9, 0)
             Dim pt3 As New XYZ(9, 9, 0)
             Dim pt4 As New XYZ(9, 0, 0)
-            Dim m_line1 As Line = _s.CommandData.Application.Application.Create.NewLine(pt1, pt2, True)
-            Dim m_line2 As Line = _s.CommandData.Application.Application.Create.NewLine(pt2, pt3, True)
-            Dim m_line3 As Line = _s.CommandData.Application.Application.Create.NewLine(pt3, pt4, True)
-            Dim m_line4 As Line = _s.CommandData.Application.Application.Create.NewLine(pt4, pt1, True)
+            Dim m_line1 As Line = Line.CreateBound(pt1, pt2)
+            Dim m_line2 As Line = Line.CreateBound(pt2, pt3)
+            Dim m_line3 As Line = Line.CreateBound(pt3, pt4)
+            Dim m_line4 As Line = Line.CreateBound(pt4, pt1)
 
             ' First Wall type
             Dim m_wt As WallType = _s.FirstWallType
@@ -90,13 +90,13 @@ Public Class clsAutomationTest
             If Not m_wt Is Nothing And Not m_level Is Nothing Then
 
               ' Create the Walls and Room
-              Dim w As Wall = _s.Doc.Create.NewWall(m_line1, m_wt, m_level, 10, m_level.Elevation, False, False)
+              Dim w As Wall = Wall.Create(_s.Doc,m_line1,m_wt.Id,m_level.Id,10.0,m_level.Elevation,False,false)
               m_elements1.Add(w.Id)
-              w = _s.Doc.Create.NewWall(m_line2, m_wt, m_level, 10, m_level.Elevation, False, False)
+              w = Wall.Create(_s.Doc,m_line2,m_wt.Id,m_level.Id,10.0,m_level.Elevation,False,false)
               m_elements1.Add(w.Id)
-              w = _s.Doc.Create.NewWall(m_line3, m_wt, m_level, 10, m_level.Elevation, False, False)
+              w = Wall.Create(_s.Doc,m_line3,m_wt.Id,m_level.Id,10.0,m_level.Elevation,False,false)
               m_elements1.Add(w.Id)
-              w = _s.Doc.Create.NewWall(m_line4, m_wt, m_level, 10, m_level.Elevation, False, False)
+              w = Wall.Create(_s.Doc,m_line4,m_wt.Id,m_level.Id,10.0,m_level.Elevation,False,false)
               m_elements1.Add(w.Id)
 
               ' Place Room
@@ -158,7 +158,7 @@ Public Class clsAutomationTest
             ' Group the Collection
             Dim m_eset As New ElementSet
             For Each x In m_elements1
-              m_eset.Insert(_s.Doc.Element(x))
+              m_eset.Insert(_s.Doc.GetElement(x))
             Next
 
             ' Group It

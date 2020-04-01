@@ -1,3 +1,12 @@
+# NOTE: This repo is primarily a host for the CASE apps that were discontinued on the previous repo. I cannot promise continued support for the apps. 
+
+For more info on this refer to the following links:
+>https://twitter.com/gtalarico/status/986790742139039749
+
+>https://twitter.com/AYBABTM/status/986669506255818752
+
+---
+
 # CASE Apps
 
 A revolutionary set of Autodesk Revit add-ins and tools, CASE Apps enhances your daily BIM workflows allowing your teams to do more — better and faster. Previously offered as pro and free subscriptions through [CASE] (http://case-inc.com/) and open sourced by [WeWork](http://wework.com), this software comes with a simple installer. 
@@ -7,7 +16,7 @@ While we hope some of our old and new friends continue to actively contribute to
 Huge thanks to [Don Rudder](https://github.com/rudderdon) for developing most of these tools! And let’s not forget [Matthew Nelson](https://github.com/mnelson7982), [Matteo Cominetti](https://github.com/teocomi), and [Kyle Morin](https://github.com/kmorin) for contributing.
 
 ## Installation
-To install the tools, head over the releases page and download the latest .exe installer: https://github.com/WeConnect/case-apps/releases
+Installation is no longer provided. This repo is to host the source code for research purposes.
 
 ## Structure
 The code contains 2015 and 2016 verison of the add-in's projects organized in folders by year and set (as per below), these are respectively part of a 2015 and a 2016 solution.

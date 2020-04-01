@@ -22,10 +22,10 @@ Public Class cmd
     Try
 
       ' Version
-      If Not commandData.Application.Application.VersionName.Contains("2014") Then
+      If Not commandData.Application.Application.VersionName.Contains("2018") Then
 
         ' Failure
-        message = "This Add-In was built for Revit 2014, please contact CASE for assistance..."
+        message = "This Add-In was built for Revit 2018, please contact CASE for assistance..."
         Return Result.Failed
 
       End If
